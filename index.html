@@ -1,37 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Changer</title>
-    <style>
-        body {
-            transition: background-image 1s ease;
-        }
-    </style>
+    <title>Random Background Image</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        const backgroundImages = [
-            'url(images/1.png)',
-            'url(images/2.png)',
-            'url(images/3.png)',
-            'url(images/4.png)'
-            // Добавьте больше URL-адресов изображений по мере необходимости
-        ];
-
-        let currentIndex = 0;
-
-        function changeBackgroundImage() {
-            document.body.style.backgroundImage = backgroundImages[currentIndex];
-            currentIndex = (currentIndex + 1) % backgroundImages.length;
-        }
-
-        // Изменение изображения каждую минуту (60000 миллисекунд)
-        setInterval(changeBackgroundImage, 60000);
-
-        // Установить начальное изображение
-        changeBackgroundImage();
-    </script>
+    <h1>Добро пожаловать на страницу с рандомным фоном!</h1>
+    <script src="script.js"></script>
 </body>
 </html>
