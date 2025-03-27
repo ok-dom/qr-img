@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Changer</title>
+    <style>
+        body {
+            transition: background-image 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const backgroundImages = [
+            'url(images/image1.jpg)',
+            'url(images/image2.jpg)',
+            'url(images/image3.jpg)'
+            // Добавьте больше URL-адресов изображений по мере необходимости
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = backgroundImages[currentIndex];
+            currentIndex = (currentIndex + 1) % backgroundImages.length;
+        }
+
+        // Изменение изображения каждую минуту (60000 миллисекунд)
+        setInterval(changeBackgroundImage, 60000);
+
+        // Установить начальное изображение
+        changeBackgroundImage();
+    </script>
+</body>
+</html>
